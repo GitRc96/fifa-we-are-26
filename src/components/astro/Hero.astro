@@ -1,0 +1,56 @@
+---
+// src/components/astro/Hero.astro
+import Countdown from "../react/Countdown.jsx";
+---
+
+<section
+  class="relative h-[85vh] md:h-screen w-full flex items-center justify-center overflow-hidden pt-20"
+>
+  <!-- Video Background -->
+  <div class="absolute inset-0 z-0 bg-[#050C24]">
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      id="hero-video"
+      class="absolute inset-0 w-full h-full object-cover opacity-35 transition-all duration-700"
+    >
+      <source
+        id="hero-video-source"
+        src="/assets/videos/intro.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <!-- Beautiful gradient overlays matching the stadium lights and deep dark tones -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-[#050C24] via-transparent to-[#050C24]/80"
+    >
+    </div>
+    <div
+      class="absolute inset-0 bg-radial-gradient from-transparent to-[#050C24]/90"
+    >
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center"
+  >
+    <h1
+      class="text-6xl sm:text-8xl md:text-[10rem] font-black italic uppercase tracking-tighter text-white drop-shadow-[0_0_40px_rgba(255,255,255,0.15)] leading-none mb-8 select-none"
+    >
+      WE ARE 26
+    </h1>
+
+    <!-- React Countdown Component hydrated on client -->
+    <div class="w-full max-w-4xl">
+      <Countdown client:load />
+    </div>
+  </div>
+
+  <!-- Subtle bottom line detail mirroring stadium ring in mockup -->
+  <div
+    class="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-transparent via-[#3CAC3B] to-transparent opacity-80"
+  >
+  </div>
+</section>

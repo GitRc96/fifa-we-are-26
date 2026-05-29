@@ -1,0 +1,214 @@
+---
+// src/components/astro/HostCities.astro
+import CityCard from './CityCard.astro';
+
+const cities = [
+  { 
+    name: 'Mexico City', 
+    country: 'Mexico', 
+    countryCode: 'MEX', 
+    stadium: 'Estadio Azteca', 
+    capacity: '87,523', 
+    weather: '22°C Clear', 
+    gradientClass: 'from-[#3CAC3B]/70 via-[#3CAC3B]/20 to-transparent' 
+  },
+  { 
+    name: 'Miami', 
+    country: 'USA', 
+    countryCode: 'USA', 
+    stadium: 'Hard Rock Stadium', 
+    capacity: '64,767', 
+    weather: '29°C Humid', 
+    gradientClass: 'from-[#E61D25]/60 via-[#035AAA]/35 to-transparent' 
+  },
+  { 
+    name: 'Vancouver', 
+    country: 'Canada', 
+    countryCode: 'CAN', 
+    stadium: 'BC Place', 
+    capacity: '54,500', 
+    weather: '17°C Rain', 
+    gradientClass: 'from-[#035AAA]/70 via-[#035AAA]/20 to-transparent' 
+  },
+  { 
+    name: 'New York/NJ', 
+    country: 'USA', 
+    countryCode: 'USA', 
+    stadium: 'MetLife Stadium', 
+    capacity: '82,500', 
+    weather: '20°C Windy', 
+    gradientClass: 'from-blue-600/60 via-indigo-950/20 to-transparent' 
+  },
+  { 
+    name: 'Dallas', 
+    country: 'USA', 
+    countryCode: 'USA', 
+    stadium: 'AT&T Stadium', 
+    capacity: '80,000', 
+    weather: '26°C Sunny', 
+    gradientClass: 'from-[#035AAA]/60 via-[#E61D25]/20 to-transparent' 
+  },
+  { 
+    name: 'Los Angeles', 
+    country: 'USA', 
+    countryCode: 'USA', 
+    stadium: 'SoFi Stadium', 
+    capacity: '70,240', 
+    weather: '23°C Sunny', 
+    gradientClass: 'from-amber-500/50 via-[#035AAA]/20 to-transparent' 
+  },
+  { 
+    name: 'Toronto', 
+    country: 'Canada', 
+    countryCode: 'CAN', 
+    stadium: 'BMO Field', 
+    capacity: '30,000', 
+    weather: '15°C Cloudy', 
+    gradientClass: 'from-[#E61D25]/70 via-rose-950/20 to-transparent' 
+  },
+  { 
+    name: 'Seattle', 
+    country: 'USA', 
+    countryCode: 'USA', 
+    stadium: 'Lumen Field', 
+    capacity: '69,000', 
+    weather: '16°C Rain', 
+    gradientClass: 'from-[#3CAC3B]/50 via-[#035AAA]/25 to-transparent' 
+  },
+  { 
+    name: 'Monterrey', 
+    country: 'Mexico', 
+    countryCode: 'MEX', 
+    stadium: 'Estadio BBVA', 
+    capacity: '53,500', 
+    weather: '28°C Sunny', 
+    gradientClass: 'from-[#3CAC3B]/70 via-emerald-950/20 to-transparent' 
+  }
+];
+---
+<section id="cities" class="py-28 bg-white relative overflow-hidden">
+  <!-- Subtle decorative light gray shadow -->
+  <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-slate-100 rounded-full blur-[150px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black italic tracking-tighter text-slate-900 uppercase mb-4">
+        Host <span class="text-[#3CAC3B]">Cities</span>
+      </h2>
+      <div class="w-16 h-1 bg-[#3CAC3B] mx-auto mb-6 transform -skew-x-12"></div>
+      
+      <!-- Country Filters Tabs (Interactivas) -->
+      <div class="flex justify-center gap-2 sm:gap-4 mt-8 flex-wrap">
+        <button 
+          class="filter-btn px-6 py-2 border-2 border-[#3CAC3B] bg-[#3CAC3B] text-[#050C24] text-xs font-black uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105 active" 
+          data-filter="ALL"
+        >
+          All
+        </button>
+        <button 
+          class="filter-btn px-6 py-2 border-2 border-slate-200 hover:border-[#3CAC3B]/50 text-slate-600 hover:text-[#3CAC3B] text-xs font-black uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105" 
+          data-filter="USA"
+        >
+          USA
+        </button>
+        <button 
+          class="filter-btn px-6 py-2 border-2 border-slate-200 hover:border-[#3CAC3B]/50 text-slate-600 hover:text-[#3CAC3B] text-xs font-black uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105" 
+          data-filter="MEX"
+        >
+          Mexico
+        </button>
+        <button 
+          class="filter-btn px-6 py-2 border-2 border-slate-200 hover:border-[#3CAC3B]/50 text-slate-600 hover:text-[#3CAC3B] text-xs font-black uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105" 
+          data-filter="CAN"
+        >
+          Canada
+        </button>
+      </div>
+    </div>
+
+    <!-- Cities Grid -->
+    <div id="cities-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
+      {cities.map((city) => (
+        <CityCard 
+          name={city.name} 
+          country={city.country} 
+          countryCode={city.countryCode}
+          stadium={city.stadium} 
+          capacity={city.capacity}
+          weather={city.weather}
+          gradientClass={city.gradientClass}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cityCards = document.querySelectorAll('.city-card');
+
+  // Hero video background DOM queries
+  const heroVideo = document.getElementById('hero-video') as HTMLVideoElement;
+  const heroVideoSource = document.getElementById('hero-video-source') as HTMLSourceElement;
+
+  // Video source database by country code
+  const countryVideos: Record<string, string> = {
+    'ALL': '/assets/videos/intro.mp4',
+    'MEX': '/assets/videos/zayu-freestayle.mp4',
+    'CAN': '/assets/videos/maple-freestayle.mp4',
+    'USA': '/assets/videos/eeuu-freestayle.mp4'
+  };
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toggle active states on buttons
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-[#3CAC3B]', 'text-[#050C24]');
+        b.classList.add('border-slate-200', 'text-slate-600');
+      });
+      btn.classList.add('bg-[#3CAC3B]', 'text-[#050C24]');
+      btn.classList.remove('border-slate-200', 'text-slate-600');
+
+      const filterValue = btn.getAttribute('data-filter') || 'ALL';
+
+      // Dynamic video background change in Hero with elegant fade transitions
+      if (heroVideo && heroVideoSource) {
+        const targetVideo = countryVideos[filterValue] || countryVideos['ALL'];
+        
+        // Only trigger update if the video is actually changing
+        const currentSrc = heroVideoSource.getAttribute('src');
+        if (currentSrc !== targetVideo) {
+          heroVideo.style.opacity = '0';
+          setTimeout(() => {
+            heroVideoSource.src = targetVideo;
+            heroVideo.load();
+            heroVideo.play().then(() => {
+              heroVideo.style.opacity = '0.35';
+            }).catch(err => {
+              console.error("Error playing hero video:", err);
+              heroVideo.style.opacity = '0.35';
+            });
+          }, 450);
+        }
+      }
+
+      // Filter logic with subtle scale & opacity transition
+      cityCards.forEach(card => {
+        const country = card.getAttribute('data-country');
+        
+        if (filterValue === 'ALL' || country === filterValue) {
+          card.classList.remove('hidden');
+          setTimeout(() => {
+            card.classList.remove('scale-95', 'opacity-0');
+            card.classList.add('scale-100', 'opacity-100');
+          }, 50);
+        } else {
+          card.classList.add('scale-95', 'opacity-0');
+          setTimeout(() => {
+            card.classList.add('hidden');
+          }, 300);
+        }
+      });
+    });
+  });
+</script>

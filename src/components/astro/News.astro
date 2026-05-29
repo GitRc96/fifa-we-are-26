@@ -1,0 +1,130 @@
+---
+// src/components/astro/News.astro
+
+const mainNews = {
+  title: 'Argentina vs Italia preliminar de la Finalísima del Mundial',
+  date: '28 MAY 2026',
+  category: 'FIFA STADIUMS',
+  image: '/assets/images/general/partido.jpg',
+  summary: 'La gran campeona de América y la campeona de Europa se enfrentarán en un choque épico de preparación para la Copa Mundial de la FIFA 2026.'
+};
+
+const subNewsList = [
+  {
+    id: 1,
+    title: 'Argentina ya tiene rival para enfrentar en partido amistoso',
+    date: '27 MAY 2026',
+    category: 'MATCH PREVIEW',
+    image: '/assets/images/general/copa.jpg'
+  },
+  {
+    id: 2,
+    title: 'Messi ya se encuentra listo para iniciar el camino al mundial',
+    date: '26 MAY 2026',
+    category: 'TALENT SHIFT',
+    image: '/assets/images/general/trophy.png'
+  },
+  {
+    id: 3,
+    title: 'Confirman los horarios oficiales para los partidos del Mundial 2026',
+    date: '25 MAY 2026',
+    category: 'LOGISTICS',
+    image: '/assets/images/general/stadium.png'
+  },
+  {
+    id: 4,
+    title: 'Los mejores estadios del norte de América se preparan para el gran show',
+    date: '24 MAY 2026',
+    category: 'HOST CITIES',
+    image: '/assets/images/general/partido.jpg'
+  }
+];
+---
+<section id="news" class="py-28 bg-[#0a1128] relative overflow-hidden border-t border-white/5">
+  <div class="absolute top-0 left-0 w-[300px] h-[300px] bg-[#3CAC3B]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="flex justify-between items-end mb-16">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-black italic tracking-tighter text-white uppercase mb-2">
+          Latest <span class="text-[#3CAC3B]">News</span>
+        </h2>
+        <div class="w-16 h-1 bg-[#3CAC3B] transform -skew-x-12"></div>
+      </div>
+      <a href="#" class="text-[10px] font-black tracking-widest text-[#3CAC3B] hover:text-white uppercase transition-colors duration-300">
+        See All News &gt;
+      </a>
+    </div>
+
+    <!-- News Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- Big Main Highlight Card (Left) -->
+      <div class="lg:col-span-7 flex flex-col bg-black/40 border border-white/5 rounded-3xl overflow-hidden group hover:border-[#3CAC3B]/30 hover:shadow-[0_0_35px_rgba(60,172,59,0.08)] transition-all duration-500">
+        <!-- Main Image -->
+        <div class="relative overflow-hidden aspect-[16/10]">
+          <img src={mainNews.image} alt={mainNews.title} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent z-10"></div>
+          
+          <!-- Category Badge -->
+          <span class="absolute top-6 left-6 px-3 py-1 bg-[#3CAC3B] text-[#050C24] font-black text-[9px] rounded uppercase tracking-wider z-20 shadow-lg">
+            {mainNews.category}
+          </span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-8 flex flex-col justify-between flex-grow">
+          <div>
+            <span class="text-[10px] font-black tracking-widest text-gray-400 uppercase mb-3 block">{mainNews.date}</span>
+            <h3 class="text-2xl sm:text-3xl font-black italic tracking-tighter text-white uppercase mb-4 leading-tight group-hover:text-[#3CAC3B] transition-colors">
+              {mainNews.title}
+            </h3>
+            <p class="text-gray-400 text-sm font-medium leading-relaxed mb-6">
+              {mainNews.summary}
+            </p>
+          </div>
+
+          <a 
+            href="#" 
+            class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#3CAC3B] hover:bg-[#3CAC3B]/90 text-[#050C24] text-xs font-black uppercase tracking-widest rounded-xl transition-all duration-300 transform active:scale-95 shadow-[0_0_15px_rgba(60,172,59,0.25)]"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+
+      <!-- Smaller Sub News Stack (Right) -->
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+        {subNewsList.map((news) => (
+          <div class="flex flex-col lg:flex-row bg-black/40 border border-white/5 rounded-2xl overflow-hidden group hover:border-[#3CAC3B]/30 hover:shadow-[0_0_20px_rgba(60,172,59,0.05)] transition-all duration-500 p-4 gap-4">
+            
+            <!-- Thumbnail Image -->
+            <div class="relative overflow-hidden rounded-xl aspect-[16/10] lg:w-36 lg:h-24 lg:flex-shrink-0">
+              <img src={news.image} alt={news.title} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-[#050C24]/10"></div>
+            </div>
+
+            <!-- Content Details -->
+            <div class="flex flex-col justify-between py-1">
+              <div>
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="text-[8px] font-black tracking-widest text-[#3CAC3B] uppercase">{news.category}</span>
+                  <span class="w-1 h-1 rounded-full bg-white/20"></span>
+                  <span class="text-[8px] font-bold text-gray-500 tracking-wider">{news.date}</span>
+                </div>
+                <h4 class="text-sm font-black italic tracking-tight text-white uppercase leading-snug group-hover:text-[#3CAC3B] transition-colors line-clamp-2">
+                  {news.title}
+                </h4>
+              </div>
+              <a href="#" class="text-[9px] font-black text-gray-400 hover:text-white uppercase tracking-widest mt-3 transition-colors">
+                Read Article &rarr;
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,78 @@
+---
+// src/components/astro/Newsletter.astro
+---
+<section id="newsletter" class="py-20 bg-[#050C24] relative overflow-hidden border-t border-white/5">
+  <!-- Neon linear details mirroring mockup -->
+  <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+    <div class="absolute top-[20%] left-[-10%] w-[120%] h-[2px] bg-gradient-to-r from-transparent via-[#3CAC3B] to-transparent transform rotate-3"></div>
+    <div class="absolute top-[80%] left-[-10%] w-[120%] h-[2px] bg-gradient-to-r from-transparent via-[#035AAA] to-transparent transform -rotate-3"></div>
+  </div>
+  
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="bg-gradient-to-r from-[#0a1128] via-[#050c24] to-[#0a1128] border border-white/5 rounded-[32px] p-8 md:p-14 shadow-[0_30px_70px_rgba(0,0,0,0.8),inset_0_0_40px_rgba(60,172,59,0.03)] relative overflow-hidden">
+      <!-- Glow Spot -->
+      <div class="absolute top-0 right-0 w-[300px] h-[300px] bg-[#3CAC3B]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+        
+        <!-- Left text and mascot -->
+        <div class="flex flex-col sm:flex-row items-center gap-8 text-center sm:text-left flex-1">
+          <!-- Neon Glowing Soccer Ball Graphic -->
+          <div class="relative w-28 h-28 flex-shrink-0 animate-spin-slow">
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-[#3CAC3B]/20 rounded-full blur-xl animate-pulse"></div>
+            <!-- Outer Ring -->
+            <div class="absolute inset-0 border-2 border-dashed border-[#3CAC3B] rounded-full opacity-60"></div>
+            <!-- Inner SVG Ball -->
+            <svg class="w-full h-full text-white drop-shadow-[0_0_15px_rgba(60,172,59,0.8)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              <path d="M2 12h20M12 2v20" />
+            </svg>
+          </div>
+
+          <div>
+            <h2 class="text-3xl md:text-4xl font-black italic tracking-tighter text-white uppercase mb-3">
+              Join the <span class="text-[#3CAC3B]">Squad</span>
+            </h2>
+            <p class="text-gray-400 text-sm font-medium max-w-md leading-relaxed">
+              Be the first to get ticket updates, exclusive news, and premium promotional details.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="w-full lg:max-w-md">
+          <form class="flex flex-col sm:flex-row gap-3 w-full">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              required
+              class="flex-grow px-5 py-4 bg-black/60 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#3CAC3B] focus:ring-1 focus:ring-[#3CAC3B] transition-all text-sm font-bold" 
+            />
+            <button 
+              type="submit" 
+              class="px-6 py-4 bg-[#3CAC3B] hover:bg-[#3CAC3B]/90 text-[#050C24] font-black text-xs uppercase tracking-widest rounded-xl transition-all duration-300 transform active:scale-95 shadow-[0_0_15px_rgba(60,172,59,0.3)] hover:shadow-[0_0_25px_rgba(60,172,59,0.5)] select-none whitespace-nowrap"
+            >
+              Join Now
+            </button>
+          </form>
+          <p class="text-[9px] text-gray-500 font-bold uppercase tracking-wider mt-3 text-center sm:text-left select-none">
+            By signing up, you agree to receive official tournament emails.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+// src/components/astro/Footer.astro
+---
+<footer class="bg-[#050C24] py-12 border-t border-white/5 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Top Footer Bar: Links & Logo -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-8 border-b border-white/5">
+      <!-- Logo & Concept Brand -->
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-black italic tracking-tighter text-white uppercase select-none">
+          FIFA
+        </span>
+        <div class="w-1 h-5 bg-[#3CAC3B] transform -skew-x-12"></div>
+        <span class="text-[10px] font-black tracking-widest text-[#3CAC3B] uppercase">WE ARE 26</span>
+      </div>
+
+      <!-- Quick Navigation matching Mockup -->
+      <nav class="flex flex-wrap justify-center gap-6 md:gap-10">
+        <a href="#cities" class="text-xs font-black uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Cities</a>
+        <a href="#match-center" class="text-xs font-black uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Schedule</a>
+        <a href="#talents" class="text-xs font-black uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Talents</a>
+        <a href="#newsletter" class="text-xs font-black uppercase tracking-widest text-gray-400 hover:text-[#3CAC3B] transition-colors">Tickets</a>
+      </nav>
+    </div>
+
+    <!-- Bottom Footer Bar: Copyrights & Secondary Links -->
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 text-[10px] font-bold tracking-widest text-gray-500 uppercase select-none">
+      <!-- Mockup secondary links -->
+      <div class="flex gap-6 flex-wrap justify-center">
+        <a href="#" class="hover:text-gray-300 transition-colors">About</a>
+        <a href="#" class="hover:text-gray-300 transition-colors">Partners</a>
+        <a href="#" class="hover:text-gray-300 transition-colors">Contact</a>
+        <a href="#" class="hover:text-gray-300 transition-colors">Privacy</a>
+      </div>
+
+      <!-- FIFA brand copyright -->
+      <div>
+        <span>&copy; FIFA 2026. ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+
+  </div>
+</footer>

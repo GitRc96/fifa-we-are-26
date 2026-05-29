@@ -1,0 +1,61 @@
+---
+// src/components/astro/CityCard.astro
+interface Props {
+  name: string;
+  country: string;
+  stadium: string;
+  capacity: string;
+  weather: string;
+  gradientClass: string;
+  countryCode: string;
+}
+
+const { name, country, stadium, capacity, weather, gradientClass, countryCode } = Astro.props;
+---
+<div 
+  class="city-card group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer bg-[#050C24] border border-white/5 shadow-2xl transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+  data-country={countryCode}
+>
+  <!-- City Card Gradient Accent Overlay -->
+  <div class={`absolute inset-0 bg-gradient-to-tr ${gradientClass} opacity-60 group-hover:opacity-75 transition-opacity duration-500 z-10`}></div>
+  
+  <!-- Subtle Stadium BG Pattern (using our stadium image or clean backdrop) -->
+  <div class="absolute inset-0 z-0 opacity-40 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700">
+    <div class="absolute inset-0 bg-[#050C24]/80 z-10"></div>
+    <img src="/assets/images/general/stadium.png" alt="" class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Content Layer -->
+  <div class="absolute inset-0 p-6 flex flex-col justify-between z-20">
+    <!-- Top badge (Country & Weather) -->
+    <div class="flex justify-between items-start">
+      <span class="px-3 py-1 bg-black/45 border border-white/10 rounded-full text-[10px] font-black tracking-widest text-white uppercase select-none">
+        {country}
+      </span>
+      <span class="flex items-center gap-1.5 px-3 py-1 bg-black/45 border border-white/10 rounded-full text-[10px] font-bold text-[#3CAC3B]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#3CAC3B] animate-pulse"></span>
+        {weather}
+      </span>
+    </div>
+
+    <!-- Bottom details -->
+    <div class="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <h3 class="text-2xl sm:text-3xl font-black italic tracking-tighter text-white uppercase leading-none mb-1 drop-shadow-md">
+        {name}
+      </h3>
+      
+      <!-- Hidden elements revealed on hover -->
+      <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 mt-2">
+        <p class="text-xs font-bold text-gray-300 tracking-wide mb-0.5">
+          STADIUM: <span class="text-white font-black">{stadium}</span>
+        </p>
+        <p class="text-xs font-bold text-gray-300 tracking-wide">
+          CAPACITY: <span class="text-[#3CAC3B] font-black">{capacity}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glow Border Effect on Hover -->
+  <div class="absolute inset-0 border border-transparent group-hover:border-white/20 rounded-2xl transition-colors duration-500 z-30 pointer-events-none"></div>
+</div>

@@ -1,0 +1,1018 @@
+{
+  "info": {
+    "_postman_id": "7fbeff52-f0d7-4e5d-abf5-fd3387be8bce",
+    "name": "WorldCupAPI-Translated",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2095816"
+  },
+  "item": [
+    {
+      "name": "Live Scores",
+      "item": [
+        {
+          "name": "Get Live Scores in Arabic",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/livescores?key={{YOUR_API_KEY}}&lang=ar",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "livescores"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "lang",
+                  "value": "ar"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Fixtures",
+      "item": [
+        {
+          "name": "Get All Fixtures in Croatian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/fixtures?key={{YOUR_API_KEY}}&lang=hr",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "fixtures"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "lang",
+                  "value": "hr"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Fixtures For a Date in Czech",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/fixtures?key={{YOUR_API_KEY}}&date=2026-06-11&lang=cs",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "fixtures"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "date",
+                  "value": "2026-06-11"
+                },
+                {
+                  "key": "lang",
+                  "value": "cs"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Group A Fixtures in Bulgarian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/fixtures?key={{YOUR_API_KEY}}&group=A&lang=bg",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "fixtures"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "group",
+                  "value": "A"
+                },
+                {
+                  "key": "lang",
+                  "value": "bg"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Canada Fixtures in Chinese",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/fixtures?key={{YOUR_API_KEY}}&team_id=1674&lang=zh",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "fixtures"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team_id",
+                  "value": "1674"
+                },
+                {
+                  "key": "lang",
+                  "value": "zh"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Match Commentary",
+      "item": [
+        {
+          "name": "Match Commentary in Danish",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/commentary?key={{YOUR_API_KEY}}&match_id=335680&lang=da",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "commentary"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "match_id",
+                  "value": "335680"
+                },
+                {
+                  "key": "lang",
+                  "value": "da"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Commentary Starting From A Second in Dutch",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/commentary?key={{YOUR_API_KEY}}&match_id=335680&from=1000&lang=nl",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "commentary"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "match_id",
+                  "value": "335680"
+                },
+                {
+                  "key": "from",
+                  "value": "1000"
+                },
+                {
+                  "key": "lang",
+                  "value": "nl"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Commentary Ending At A Second in Estonian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/commentary?key={{YOUR_API_KEY}}&match_id=335680&to=1000&lang=et",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "commentary"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "match_id",
+                  "value": "335680"
+                },
+                {
+                  "key": "to",
+                  "value": "1000"
+                },
+                {
+                  "key": "lang",
+                  "value": "et"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Match Events",
+      "item": [
+        {
+          "name": "Match Events in Finish",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/events?key={{YOUR_API_KEY}}&match_id=335680&lang=fi",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "match_id",
+                  "value": "335680"
+                },
+                {
+                  "key": "lang",
+                  "value": "fi"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Match Statistics",
+      "item": [
+        {
+          "name": "Match Statistics - no translations possible",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/statistics?key={{YOUR_API_KEY}}&match_id=335680",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "statistics"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "match_id",
+                  "value": "335680"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Match Lineups",
+      "item": [
+        {
+          "name": "Match Lineups in French",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/lineups?key={{YOUR_API_KEY}}&match_id=335680&lang=fr",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "lineups"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "match_id",
+                  "value": "335680"
+                },
+                {
+                  "key": "lang",
+                  "value": "fr"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Teams Squads",
+      "item": [
+        {
+          "name": "Argentina Squad in Georgian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/squads?key={{YOUR_API_KEY}}&team_id=1443&lang=ka",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "squads"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team_id",
+                  "value": "1443"
+                },
+                {
+                  "key": "lang",
+                  "value": "ka"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "History Matches",
+      "item": [
+        {
+          "name": "Latest Finished Matches in German",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/history?key={{YOUR_API_KEY}}&lang=de",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "history"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "lang",
+                  "value": "de"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "World Cup 2022 Matches in Greek",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/history?key={{YOUR_API_KEY}}&date_from=2022-11-01&date_to=2022-12-31&lang=el",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "history"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "date_from",
+                  "value": "2022-11-01"
+                },
+                {
+                  "key": "date_to",
+                  "value": "2022-12-31"
+                },
+                {
+                  "key": "lang",
+                  "value": "el"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "World Cup 2018 Matches in Hungarian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/history?key={{YOUR_API_KEY}}&date_from=2018-06-01&date_to=2018-08-31&lang=hu",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "history"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "date_from",
+                  "value": "2018-06-01"
+                },
+                {
+                  "key": "date_to",
+                  "value": "2018-08-31"
+                },
+                {
+                  "key": "lang",
+                  "value": "hu"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Argentina Matches History in Italian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/history?key={{YOUR_API_KEY}}&team_id=1443&lang=it",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "history"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team_id",
+                  "value": "1443"
+                },
+                {
+                  "key": "lang",
+                  "value": "it"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Head 2 Head",
+      "item": [
+        {
+          "name": "Head 2 Head (SWI - CRO) in Japanese",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/head2head?key={{YOUR_API_KEY}}&team1_id=208&team2_id=211&lang=ja",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "head2head"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team1_id",
+                  "value": "208"
+                },
+                {
+                  "key": "team2_id",
+                  "value": "211"
+                },
+                {
+                  "key": "lang",
+                  "value": "ja"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Head 2 Head (BRA - ARG) in Korean",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/head2head?key={{YOUR_API_KEY}}&team1_id=1448&team2_id=1443&lang=ko",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "head2head"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team1_id",
+                  "value": "1448"
+                },
+                {
+                  "key": "team2_id",
+                  "value": "1443"
+                },
+                {
+                  "key": "lang",
+                  "value": "ko"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Head 2 Head (FRA - ENG) in Lithuanian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/head2head?key={{YOUR_API_KEY}}&team1_id=1439&team2_id=1456&lang=lt",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "head2head"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team1_id",
+                  "value": "1439"
+                },
+                {
+                  "key": "team2_id",
+                  "value": "1456"
+                },
+                {
+                  "key": "lang",
+                  "value": "lt"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Head 2 Head (KOR - JPN) in Norwegian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/head2head?key={{YOUR_API_KEY}}&team1_id=1452&team2_id=1458&lang=no",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "head2head"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team1_id",
+                  "value": "1452"
+                },
+                {
+                  "key": "team2_id",
+                  "value": "1458"
+                },
+                {
+                  "key": "lang",
+                  "value": "no"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Head 2 Head (MEX - USA) in Persian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/head2head?key={{YOUR_API_KEY}}&team1_id=1450&team2_id=1849&lang=fa",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "head2head"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team1_id",
+                  "value": "1450"
+                },
+                {
+                  "key": "team2_id",
+                  "value": "1849"
+                },
+                {
+                  "key": "lang",
+                  "value": "fa"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Head 2 Head (CIV - SEN) in Polish",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/head2head?key={{YOUR_API_KEY}}&team1_id=1628&team2_id=1460&lang=pl",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "head2head"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team1_id",
+                  "value": "1628"
+                },
+                {
+                  "key": "team2_id",
+                  "value": "1460"
+                },
+                {
+                  "key": "lang",
+                  "value": "pl"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Head 2 Head (AUS - NZL) in Portuguese",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/head2head?key={{YOUR_API_KEY}}&team1_id=1440&team2_id=5345&lang=pt",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "head2head"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "team1_id",
+                  "value": "1440"
+                },
+                {
+                  "key": "team2_id",
+                  "value": "5345"
+                },
+                {
+                  "key": "lang",
+                  "value": "pt"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Live Standings",
+      "item": [
+        {
+          "name": "Group A Live Standings in Romania",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/livestandings?key={{YOUR_API_KEY}}&group=A&lang=ro",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "livestandings"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "group",
+                  "value": "A"
+                },
+                {
+                  "key": "lang",
+                  "value": "ro"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Standings",
+      "item": [
+        {
+          "name": "Group A Standings in Russian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/standings?key={{YOUR_API_KEY}}&group=A&lang=ru",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "standings"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "group",
+                  "value": "A"
+                },
+                {
+                  "key": "lang",
+                  "value": "ru"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Group B Standings With Form in Serbian",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/standings?key={{YOUR_API_KEY}}&group=B&form=1&lang=sr",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "standings"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "group",
+                  "value": "B"
+                },
+                {
+                  "key": "form",
+                  "value": "1"
+                },
+                {
+                  "key": "lang",
+                  "value": "sr"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Player Statistics",
+      "item": [
+        {
+          "name": "Top Goalscorers in Slovak",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/goalscorers?key={{YOUR_API_KEY}}&lang=sk",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "goalscorers"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "lang",
+                  "value": "sk"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Top Red/Yellow Cards in Spannish",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "api.worldcupapi.com/cards?key={{YOUR_API_KEY}}&lang=es",
+              "host": [
+                "api",
+                "worldcupapi",
+                "com"
+              ],
+              "path": [
+                "cards"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{YOUR_API_KEY}}"
+                },
+                {
+                  "key": "lang",
+                  "value": "es"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

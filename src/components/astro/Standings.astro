@@ -1,0 +1,89 @@
+---
+// src/components/astro/Standings.astro
+
+const standings = [
+  { rank: 1, team: 'Mexico', flag: '🇲🇽', pl: 3, w: 2, d: 1, l: 0, gd: '+4', pts: 7, form: ['W', 'D', 'W'] },
+  { rank: 2, team: 'USA', flag: '🇺🇸', pl: 3, w: 2, d: 0, l: 1, gd: '+2', pts: 6, form: ['W', 'L', 'W'] },
+  { rank: 3, team: 'Canada', flag: '🇨🇦', pl: 3, w: 1, d: 1, l: 1, gd: '0', pts: 4, form: ['L', 'D', 'W'] },
+  { rank: 4, team: 'South Africa', flag: '🇿🇦', pl: 3, w: 0, d: 0, l: 3, gd: '-6', pts: 0, form: ['L', 'L', 'L'] }
+];
+---
+<section id="standings" class="py-24 bg-[#0a1128] relative overflow-hidden border-t border-white/5">
+  <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-[#035AAA]/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black italic tracking-tighter text-white uppercase mb-4">
+        Group <span class="text-[#3CAC3B]">Standings</span>
+      </h2>
+      <div class="w-16 h-1 bg-[#3CAC3B] mx-auto mb-6 transform -skew-x-12"></div>
+      <p class="text-xs font-black tracking-widest text-[#3CAC3B] uppercase mt-2">Group A - Initial Stage</p>
+    </div>
+
+    <!-- Standings Table Container -->
+    <div class="bg-black/45 backdrop-blur-md border border-white/5 rounded-2xl p-4 sm:p-6 shadow-2xl overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm font-bold">
+          <thead>
+            <tr class="border-b border-white/10 text-gray-500 text-[10px] tracking-widest uppercase">
+              <th class="py-4 px-3 w-12 text-center">#</th>
+              <th class="py-4 px-3">Team</th>
+              <th class="py-4 px-3 text-center">PL</th>
+              <th class="py-4 px-3 text-center">W</th>
+              <th class="py-4 px-3 text-center">D</th>
+              <th class="py-4 px-3 text-center">L</th>
+              <th class="py-4 px-3 text-center">GD</th>
+              <th class="py-4 px-3 text-center">PTS</th>
+              <th class="py-4 px-3 text-center hidden sm:table-cell">Form</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-gray-300">
+            {standings.map((row) => (
+              <tr class="group hover:bg-[#3CAC3B]/5 hover:text-white transition-all duration-300">
+                <!-- Rank -->
+                <td class="py-5 px-3 text-center font-black text-xs">
+                  <span class={`inline-flex items-center justify-center w-6 h-6 rounded-md ${row.rank <= 2 ? 'bg-[#3CAC3B]/20 text-[#3CAC3B]' : 'bg-white/5 text-gray-400'}`}>
+                    {row.rank}
+                  </span>
+                </td>
+                
+                <!-- Team Name & Flag -->
+                <td class="py-5 px-3 flex items-center gap-3">
+                  <span class="text-2xl drop-shadow-sm transform group-hover:scale-110 transition-transform duration-300">{row.flag}</span>
+                  <span class="font-extrabold italic uppercase tracking-tight text-white">{row.team}</span>
+                </td>
+
+                <!-- PL, W, D, L -->
+                <td class="py-5 px-3 text-center font-bold text-xs">{row.pl}</td>
+                <td class="py-5 px-3 text-center text-xs">{row.w}</td>
+                <td class="py-5 px-3 text-center text-xs">{row.d}</td>
+                <td class="py-5 px-3 text-center text-xs">{row.l}</td>
+                
+                <!-- GD -->
+                <td class={`py-5 px-3 text-center text-xs font-black ${row.gd.startsWith('+') ? 'text-[#3CAC3B]' : row.gd === '0' ? 'text-gray-400' : 'text-[#E61D25]'}`}>
+                  {row.gd}
+                </td>
+                
+                <!-- PTS -->
+                <td class="py-5 px-3 text-center font-black text-sm text-white group-hover:text-[#3CAC3B] transition-colors">{row.pts}</td>
+                
+                <!-- Form Indicators -->
+                <td class="py-5 px-3 hidden sm:table-cell">
+                  <div class="flex justify-center gap-1.5">
+                    {row.form.map((f) => (
+                      <span class={`inline-flex items-center justify-center w-5 h-5 text-[9px] font-black rounded-full ${
+                        f === 'W' ? 'bg-[#3CAC3B]/20 text-[#3CAC3B]' : f === 'D' ? 'bg-gray-500/20 text-gray-400' : 'bg-[#E61D25]/20 text-[#E61D25]'
+                      }`}>
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

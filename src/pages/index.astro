@@ -1,0 +1,52 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Hero from '../components/astro/Hero.astro';
+import HostCities from '../components/astro/HostCities.astro';
+import Format from '../components/astro/Format.astro';
+import Mascots from '../components/astro/Mascots.astro';
+import Newsletter from '../components/astro/Newsletter.astro';
+import MatchCenter from '../components/astro/MatchCenter.astro';
+import Standings from '../components/astro/Standings.astro';
+import News from '../components/astro/News.astro';
+import MusicPlayer from '../components/astro/MusicPlayer.astro';
+import Footer from '../components/astro/Footer.astro';
+---
+
+<Layout title="WE ARE 26 | FIFA World Cup 2026">
+  <!-- Dynamic, Responsive Glassmorphic Navigation -->
+  <Header />
+  
+  <main class="relative z-10">
+    <!-- Hero with Active Video Background and retro-neon stadium Countdown -->
+    <Hero />
+    
+    <!-- Curated grid of Host Cities with real capacity and country filtering -->
+    <HostCities />
+    
+    <!-- Expanded tournament format details with SVG custom structures -->
+    <Format />
+
+    <!-- Meet the mascots interactive showcase with high-impact transitions -->
+    <Mascots />
+
+    <!-- In-between lead capture Newsletter -->
+    <Newsletter />
+
+    <!-- MatchCenter showing schedule connected to WorldCup API and interactive Group filters -->
+    <MatchCenter />
+
+    <!-- Premium detailed Group A tables and standings -->
+    <Standings />
+
+    <!-- Highlights and News Grid with custom sports images -->
+    <News />
+  </main>
+
+  <!-- Interactive Floating Background Music Player -->
+  <MusicPlayer />
+  
+  <!-- Sleek Footer unifying the design -->
+  <Footer />
+</Layout>

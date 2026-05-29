@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #050C24;
+  --color-neon-green: #3CAC3B;
+  --color-electric-cyan: #035AAA;
+  --color-hot-pink: #E61D25;
+  --color-gold: #FFD700;
+}
+
+body {
+  @apply bg-deep-navy text-white antialiased overflow-x-hidden;
+}
