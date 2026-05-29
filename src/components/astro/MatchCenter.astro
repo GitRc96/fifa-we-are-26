@@ -295,7 +295,7 @@ if (hasRealData) {
   </div>
 </div>
 
-<script>
+<script is:inline>
   const matchGrid = document.getElementById('match-grid') as HTMLDivElement;
   const serverLineups = JSON.parse(matchGrid?.getAttribute('data-lineups') || '{}');
 
@@ -412,8 +412,14 @@ if (hasRealData) {
     return { players };
   }
 
-  // Initial Filter Run on load
-  filterMatches('GROUP-A');
+  // Initial Filter Run on load - Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      filterMatches('GROUP-A');
+    });
+  } else {
+    filterMatches('GROUP-A');
+  }
 
   matchFilterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
